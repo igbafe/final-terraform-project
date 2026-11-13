@@ -4,7 +4,7 @@ read -rsp "Enter your GitHub PAT: " GH_TOKEN
 echo
 export GH_TOKEN
 
-ORG="digitalwitchdemo"
+ORG="simonpetercloud"
 REPO="ecommerce-final-project"
 
 # Get Organization ID

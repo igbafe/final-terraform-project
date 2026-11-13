@@ -3,7 +3,7 @@ Summary,Issue Type,Labels,Description
 "[Infra] Clone the Terraform repo and make it your own",Task,infrastructure,"Clone, delete .git, git init, set Git identity, push to your own repo. Add GitHub secret AWS_OIDC_ARN. Done when: your repo has the code and the secret."
 "[Infra] Pipeline job 1: terraform init, fmt and validate",Task,infrastructure,"Push to main. Done when: the init & validate job is green."
 "[Infra] Pipeline job 2: security scans (tfsec + SonarQube)",Task,infrastructure,"Review tfsec and SonarQube findings. Done when: both scans ran and findings are reviewed."
-"[Infra] Pipeline job 3: terraform plan and apply",Task,infrastructure,"Creates VPC, EKS (5 x t2.medium), EBS/EFS storage, NGINX ingress, cert-manager, Argo CD and uploads kubeconfig to S3. Done when: apply succeeds."
+"[Infra] Pipeline job 3: terraform plan and apply",Task,infrastructure,"Creates VPC, EKS (5 x c7i-flex.large), EBS/EFS storage, NGINX ingress, cert-manager, Argo CD and uploads kubeconfig to S3. Done when: apply succeeds."
 "[Infra] Pipeline job 4: verify the deployment",Task,infrastructure,"Cluster ACTIVE, nodes Ready, cert-manager, ClusterIssuer, NGINX load balancer, Argo CD, EFS and kubeconfig in S3 all pass. Done when: the verify job is green."
 "[Infra] Argo CD: DNS record, ingress and admin login",Task,infrastructure,"Create the argocd CNAME to the load balancer, apply manifests/argocd-ingress.yaml, get the admin password. Done when: https://argocd.<domain> opens with a valid certificate and you can log in."
 "[CI] Clone the app and k8s-file repos and make them your own",Task,ci,"Clone both repos, create your own, push. Replace the AWS account ID, k8s-file repo and domain with yours. Done when: both of your repos contain your values."
